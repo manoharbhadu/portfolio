@@ -24,7 +24,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
     background-color: #000;
-    box-shadow: 0 -100vh 0 100vh yellow, 0 0 15px 5px black;
+    box-shadow: 0 -100vh 0 100vh #e31b6d, 0 0 15px 5px black;
 }
 
 
@@ -88,6 +88,10 @@ header {
     background: #e31b6d;
     bottom: -5px;
     transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -ms-transition: .3s;
 }
 
 .navbaar ul a:hover::before {
@@ -403,6 +407,8 @@ header {
 
 .social_icon i:hover {
     transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
     background: #e31b6d;
 }
 
@@ -455,6 +461,7 @@ footer {
     padding: 2.5rem 0rem;
     text-align: center;
 }
+
 
 
 
@@ -533,8 +540,13 @@ footer {
         padding: 0px;
     }
 
+    .project_cont {
+        margin: 0px;
+    }
+
     .aboutme,
-    .cv {
+    .cv,
+    .intro h1 {
         text-align: center;
     }
 
@@ -556,4 +568,29 @@ footer {
     .intro h2 {
         font-size: 15px;
     }
+
+    .project_item a button {
+        font-size: 10px;
+    }
+
+    .submit {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .contact_first p {
+        font-size: 11px;
+    }
+
+
+
+    .aboutinfo .aboutpera {
+        text-align: justify;
+    }
+
+    .sectionheader {
+        font-size: 30px;
+    }
+
+
 }
