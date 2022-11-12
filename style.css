@@ -509,6 +509,7 @@ footer {
     }
 
 
+
 }
 
 
@@ -529,11 +530,6 @@ footer {
 
     .skill {
         grid-template-columns: 1fr 1fr;
-    }
-
-    .project_cont {
-        width: 90%;
-        margin: 20px;
     }
 
     .skill_container {
@@ -582,8 +578,6 @@ footer {
         font-size: 11px;
     }
 
-
-
     .aboutinfo .aboutpera {
         text-align: justify;
     }
@@ -592,5 +586,9 @@ footer {
         font-size: 30px;
     }
 
+    .project_cont {
+        width: 90%;
+        margin: 10px auto;
+    }
 
 }
