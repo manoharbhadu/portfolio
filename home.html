@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="description"
+    <meta name="description"
         content="Hello World,this is manohar bhadu. I'm a Web developer. I create webpage layout using html css js and other language.">
     <meta name="keywords"
         content="manohar bhadu,web development, web designing, front end developer, website, jodhpur, india">
     <meta name="author" content="Manohar Bhadu">
-    <meta property="og:title" content="Manohar Bhadu" /> -->
+    <meta property="og:title" content="Manohar Bhadu" />
+    <link rel="shortcut icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBtL-rPZSLZHZ5n3fXT-0y7gCrOiLOJcEwvA&usqp=CAU"
+        type="image/x-icon">
     <title>manohar bhadu portfolio website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
 </head>
 
 <body>
@@ -22,10 +26,10 @@
             <canvas id="space"></canvas>
             <div class="row banner">
                 <!-- <div class="img">
-                    <img src="img/photo-1570295999919-56ceb5ecca61-removebg-preview.png" alt="manohar img">
+                    <img src="" alt="manohar img">
                 </div> -->
                 <div class="intro">
-                    <h1>Hey, I'm <span class="name"> &lt;MANOHAR BHADU/&gt;</span></h1>
+                    <h1>Hey, I'm <span class="name wow fadeInLeft"> &lt;MANOHAR BHADU/&gt;</span></h1>
                     <h2>I'm a web developer</h2>
                 </div>
             </div>
@@ -78,7 +82,7 @@
 
         <section class="section skill_container" id="skill">
             <h1 class="sectionheader section_header2">Skill</h1>
-            <div class="skill">
+            <div class="skill wow fadeInUp">
                 <div class="htmll html">
                     <i class="fa-brands fa-html5"></i>
                     <p class="skillname">HTML5</p>
@@ -175,19 +179,18 @@
                     <div class="project_item">
                         <a href="https://github.com/manoharbhadu/one-page-website"> <button
                                 class="project_btn">CODE</button></a>
-                        <a href="https://github.com/manoharbhadu/one-page-website" target="_blank"> <button
-                                class="project_btn">LIVE
+                        <a href="https://metanewsfeed.netlify.app/" target="_blank"> <button class="project_btn">LIVE
                                 SITE</button></a>
                     </div>
                 </div>
                 <div class="project_cont">
                     <div class="project_img">
-                        <img src="img/meta.png" alt="">
+                        <img src="img/smarciy.png" alt="">
                     </div>
                     <div class="project_item">
-                        <a href="https://github.com/manoharbhadu/meta-news-feed"> <button
+                        <a href="https://github.com/manoharbhadu/smartcity"> <button
                                 class="project_btn">CODE</button></a>
-                        <a href="https://github.com/manoharbhadu/meta-news-feed" target="_blank"> <button
+                        <a href="https://smartcitybymanor.netlify.app/" target="_blank"> <button
                                 class="project_btn">LIVE
                                 SITE</button></a>
                     </div>
@@ -204,14 +207,13 @@
                         <input name="email" type="email" placeholder="email" required>
                         <textarea name="message" id="" cols="21.5" rows="4" placeholder="message"></textarea>
                         <span id="msg"></span>
-                        <button class="btn submit" type="submit">Send</button>
+                        <button class="btn submit wow bounceIn" type="submit">Send</button>
                     </form>
                 </div>
                 <div class="contact_first">
                     <div class="contact_info">
                         <p><i class="fa-solid fa-paper-plane"></i>manohar.bhadoo@gmail.com</p>
                         <p><i class="fa-solid fa-phone"></i>8955609817</p>
-
                     </div>
                 </div>
             </div>
@@ -222,5 +224,25 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="script.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+    $(window).on("load scroll", function () {
+        "use strict";
+        $(".wow").css("animation-play-state", "paused");
+        $(".wow").each(function () {
+            if (!($(this).data("wow-duration"))) {
+                $(this).data("wow-duration", "1s");
+            }
+            if ($(this).data("wow-offset") + $(this).offset().top <= $(window).scrollTop() + $(window).height() || (!($(this).data("wow-offset")) && $(this).offset().top <= $(window).scrollTop() + $(window).height())) {
+                $(this).css("animation-play-state", "running ");
+                $(this).css({
+                    "animationDuration": $(this).data("wow-duration"),
+                    "animationDelay": $(this).data("wow-delay"),
+                    "animationIterationCount": $(this).data("wow-iteration")
+                });
+            }
+        });
+    });
+</script>
 
 </html>
